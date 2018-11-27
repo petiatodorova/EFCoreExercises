@@ -1,0 +1,2 @@
+# EFCoreExercises
+EntityFrameworkCore exercises
