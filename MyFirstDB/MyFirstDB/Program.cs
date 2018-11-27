@@ -16,9 +16,9 @@ namespace MyFirstDB
             var friends = context
                 .Users
                 .Include(x => x.Friends)
-                .FirstOrDefault(x => x.Username == "Pesho")?
+                .FirstOrDefault(x => x.Username == "Mimi")?
                 .Friends;
-            Console.WriteLine($"{string.Join(", ", friends.Select(y => y.Name))}");
+            Console.WriteLine($"{string.Join(Environment.NewLine, friends.Select(y => y.Name))}");
             Console.WriteLine("Hello World!");
         }
     }
