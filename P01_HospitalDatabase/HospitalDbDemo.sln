@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01_HospitalDatabase.Data.M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01_HospitalDatabase.Data", "P01_HospitalDatabase.Data\P01_HospitalDatabase.Data.csproj", "{24613A23-DB3F-48E7-B789-C44A56B15DEB}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalDatabaseInitializer", "..\..\..\HospitalDatabaseInitializer\HospitalDatabaseInitializer.csproj", "{09AD9FB4-B141-42CA-A524-6C87315B9474}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{24613A23-DB3F-48E7-B789-C44A56B15DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24613A23-DB3F-48E7-B789-C44A56B15DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24613A23-DB3F-48E7-B789-C44A56B15DEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09AD9FB4-B141-42CA-A524-6C87315B9474}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09AD9FB4-B141-42CA-A524-6C87315B9474}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09AD9FB4-B141-42CA-A524-6C87315B9474}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09AD9FB4-B141-42CA-A524-6C87315B9474}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
