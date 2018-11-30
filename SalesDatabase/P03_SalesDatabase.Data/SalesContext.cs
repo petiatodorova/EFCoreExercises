@@ -9,12 +9,6 @@ namespace P03_SalesDatabase.Data
 {
     public class SalesContext : DbContext
     {
-        public SalesContext()
-        { }
-
-        public SalesContext(DbContextOptions options)
-        { }
-
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Sale> Sales { get; set; }
@@ -26,6 +20,8 @@ namespace P03_SalesDatabase.Data
             {
                 optionsBuilder.UseSqlServer(Configuration.ConnectionString);
             }
+
+            base.OnConfiguring(optionsBuilder);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -34,6 +30,8 @@ namespace P03_SalesDatabase.Data
             modelBuilder.ApplyConfiguration(new ProductConfig());
             modelBuilder.ApplyConfiguration(new SaleConfig());
             modelBuilder.ApplyConfiguration(new StoreConfig());   
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
