@@ -23,7 +23,7 @@ namespace P01_StudentSystem.Data
         public DbSet<Resource> Resources { get; set; }
         public DbSet<Homework> HomeworkSubmissions { get; set; }
         public DbSet<Student> Students { get; set; }
-        public DbSet<StudentCourse> StudentsCourses { get; set; }
+        public DbSet<StudentCourse> StudentCourses { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
