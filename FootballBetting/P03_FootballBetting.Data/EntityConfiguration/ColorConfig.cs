@@ -11,7 +11,6 @@ namespace P03_FootballBetting.Data.EntityConfiguration
     {
         public void Configure(EntityTypeBuilder<Color> builder)
         {
-            throw new NotImplementedException();
         }
     }
 }

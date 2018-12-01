@@ -11,7 +11,7 @@ namespace P03_FootballBetting.Data.EntityConfiguration
     {
         public void Configure(EntityTypeBuilder<PlayerStatistic> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(x => new {x.PlayerId, x.GameId});
         }
     }
 }

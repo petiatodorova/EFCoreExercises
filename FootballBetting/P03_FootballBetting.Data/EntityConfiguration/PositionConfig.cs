@@ -11,7 +11,10 @@ namespace P03_FootballBetting.Data.EntityConfiguration
     {
         public void Configure(EntityTypeBuilder<Position> builder)
         {
-            throw new NotImplementedException();
+            builder
+                .HasMany(x => x.Players)
+                .WithOne(x => x.Position)
+                .HasForeignKey(x => x.PositionId);
         }
     }
 }
