@@ -8,7 +8,7 @@ namespace P03_FootballBetting.Data.Models
     {
         public Player()
         {
-            this.Games = new HashSet<PlayerStatistic>();
+            this.PlayerStatistics = new HashSet<PlayerStatistic>();
         }
 
         public int PlayerId { get; set; }
@@ -25,6 +25,6 @@ namespace P03_FootballBetting.Data.Models
 
         public bool IsInjured { get; set; }
 
-        public ICollection<PlayerStatistic> Games { get; set; }
+        public ICollection<PlayerStatistic> PlayerStatistics { get; set; }
     }
 }

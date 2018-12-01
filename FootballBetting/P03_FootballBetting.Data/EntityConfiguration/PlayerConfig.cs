@@ -12,7 +12,7 @@ namespace P03_FootballBetting.Data.EntityConfiguration
         public void Configure(EntityTypeBuilder<Player> builder)
         {
             builder
-                .HasMany(x => x.Games)
+                .HasMany(x => x.PlayerStatistics)
                 .WithOne(x => x.Player)
                 .HasForeignKey(x => x.PlayerId);
         }

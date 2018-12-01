@@ -8,7 +8,7 @@ namespace P03_FootballBetting.Data.Models
     {
         public int BetId { get; set; }
 
-        public int Amount { get; set; }
+        public decimal Amount { get; set; }
 
         public string Prediction { get; set; }
 

@@ -12,17 +12,12 @@ namespace P03_FootballBetting.Data.EntityConfiguration
         public void Configure(EntityTypeBuilder<Game> builder)
         {
             builder
-                .HasMany(x => x.Players)
+                .HasMany(x => x.PlayerStatistics)
                 .WithOne(x => x.Game)
                 .HasForeignKey(x => x.GameId);
 
             builder
                 .HasMany(x => x.Bets)
-                .WithOne(x => x.Game)
-                .HasForeignKey(x => x.GameId);
-
-            builder
-                .HasMany(x => x.Players)
                 .WithOne(x => x.Game)
                 .HasForeignKey(x => x.GameId);
         }
