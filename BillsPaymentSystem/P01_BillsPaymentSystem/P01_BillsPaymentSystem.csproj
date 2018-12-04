@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\P01_BillsPaymentSystem.Data\P01_BillsPaymentSystem.Data.csproj" />
+  </ItemGroup>
+
 </Project>

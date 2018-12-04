@@ -1,14 +1,33 @@
-﻿using System;
+﻿using P01_BillsPaymentSystem.Data.Models.Attributes;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace P01_BillsPaymentSystem.Data.Models
 {
     public class User
     {
+        [Key]
+        public int UserId { get; set; }
 
-//oUserId
-//oFirstName (up to 50 characters, unicode)
-//oLastName (up to 50 characters, unicode)
-//oEmail (up to 80 characters, non-unicode)
-//oPassword (up to 25 characters, non-unicode)
+        [Required]
+        [MaxLength(50)]
+        public string FirstName { get; set; }
+
+        [Required]
+        [MaxLength(50)]
+        public string LastName { get; set; }
+
+        [Required]
+        [MaxLength(80)]
+        [NonUnicode]
+        public string Email { get; set; }
+
+        [Required]
+        [MaxLength(25)]
+        [NonUnicode]
+        public string Password { get; set; }
+
+        public ICollection<PaymentMethod> PaymentMethods { get; set; }
     }
 }
