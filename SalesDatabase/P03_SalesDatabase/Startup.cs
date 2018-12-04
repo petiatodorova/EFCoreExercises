@@ -1,11 +1,17 @@
-﻿using System;
+﻿using P03_SalesDatabase.Data;
+using System;
 
 namespace P03_SalesDatabase
 {
     public class Startup
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+            using (SalesContext context = new SalesContext())
+            {
+                context.Database.EnsureDeleted();
+                context.Database.EnsureCreated();
+            }
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using P01_HospitalDatabase.Data;
-using P01_HospitalDatabase.Initializer;
 
 namespace P01_HospitalDatabase
 {
@@ -7,10 +6,6 @@ namespace P01_HospitalDatabase
     {
         static void Main(string[] args)
         {
-            using (HospitalContext context = new HospitalContext())
-            {
-                DatabaseInitializer.InitialSeed(context);
-            }
         }
     }
 }

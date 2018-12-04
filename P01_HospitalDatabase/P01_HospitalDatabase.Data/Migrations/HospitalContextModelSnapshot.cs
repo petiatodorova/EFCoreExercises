@@ -42,6 +42,24 @@ namespace P01_HospitalDatabase.Data.Migrations
                     b.ToTable("Diagnoses");
                 });
 
+            modelBuilder.Entity("P01_HospitalDatabase.Data.Models.Doctor", b =>
+                {
+                    b.Property<int>("DoctorId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(100)
+                        .IsUnicode(true);
+
+                    b.Property<string>("Specialty")
+                        .HasMaxLength(100)
+                        .IsUnicode(true);
+
+                    b.HasKey("DoctorId");
+
+                    b.ToTable("Doctors");
+                });
+
             modelBuilder.Entity("P01_HospitalDatabase.Data.Models.Medicament", b =>
                 {
                     b.Property<int>("MedicamentId")
@@ -108,9 +126,13 @@ namespace P01_HospitalDatabase.Data.Migrations
 
                     b.Property<DateTime>("Date");
 
+                    b.Property<int?>("DoctorId");
+
                     b.Property<int>("PatientId");
 
                     b.HasKey("VisitationId");
+
+                    b.HasIndex("DoctorId");
 
                     b.HasIndex("PatientId");
 
@@ -140,6 +162,10 @@ namespace P01_HospitalDatabase.Data.Migrations
 
             modelBuilder.Entity("P01_HospitalDatabase.Data.Models.Visitation", b =>
                 {
+                    b.HasOne("P01_HospitalDatabase.Data.Models.Doctor", "Doctor")
+                        .WithMany("Visitations")
+                        .HasForeignKey("DoctorId");
+
                     b.HasOne("P01_HospitalDatabase.Data.Models.Patient", "Patient")
                         .WithMany("Visitations")
                         .HasForeignKey("PatientId")
